@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Online_Market</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\MarketLogo.jpg" />
+    <None Remove="Images\Search.png" />
+    <None Remove="Images\ShoppingCar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\MarketLogo.jpg" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\ShoppingCar.png" />
+  </ItemGroup>
+
+</Project>

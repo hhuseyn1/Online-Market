@@ -1,0 +1,38 @@
+﻿<Window x:Class="Online_Market.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Market"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#0C1821">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.7*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/MarketLogo.jpg" Margin="5"/>
+                <TextBox Grid.Column="2" Margin="5 20 5 20"  ></TextBox>
+            <Image Name="SearchBtn" Source="/Images/Search.png" Grid.Column="3" MouseLeftButtonDown="SearchClick" Width="25"/>
+                <Image Name="ShoppingCar" Source="/Images/ShoppingCar.png" Grid.Column="5" MouseLeftButtonDown="SearchClick"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <WrapPanel Name="PrPanel"/>
+
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
