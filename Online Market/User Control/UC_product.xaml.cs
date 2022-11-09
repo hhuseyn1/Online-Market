@@ -8,7 +8,6 @@ namespace Online_Market.User_Control;
 public partial class UC_product : UserControl
 {
     public Product? CurrentProduct { get; set; }
-    public List<Product?>ShoppingList { get; set; }
     public UC_product(Product? product)
     {
     InitializeComponent();
@@ -25,6 +24,7 @@ public partial class UC_product : UserControl
                 if(CurrentProduct?.BuyCount < 99)
                 {
                 CurrentProduct.BuyCount++;
+                    CurrentProduct.IsAdd= true;
                 }
             }
             else if (btn.Name == "Remove")
@@ -32,6 +32,7 @@ public partial class UC_product : UserControl
                 if (CurrentProduct?.BuyCount > 0)
                 {
                     CurrentProduct.BuyCount--;
+                    CurrentProduct.IsAdd = false;
                 }
             }
         }

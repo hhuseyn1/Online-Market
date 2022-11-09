@@ -5,43 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Online_Market.User_Control"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Wheat">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="6*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <WrapPanel Grid.Row="0"/>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="0" Text="{Binding TotalPrice}"/>
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Text="₼"/>
-            <Grid Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="15*"/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Button Grid.Row="0" Background="Green" Margin="0,1,-2,1"/>
+             d:DesignHeight="50" d:DesignWidth="800">
 
-                        <Button  Background="Red" Margin="0,31,-2,1">
-                        </Button>
-
-                    </Grid>
-                </Grid>
-            </Grid>
-        </Grid>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="{Binding CurrentProduct.ImageUrl}"/>
+        <TextBlock Grid.Column="1" Text="{Binding CurrentProduct.Name}"/>
+        <Button Name="Remove" Grid.Column="3" Margin="0" Background="Red" Click="AddRemove" FontSize="15" Foreground="White" Content="-"/>
+        <TextBlock Text="{Binding CurrentProduct.BuyCount}" Grid.Column="4" VerticalAlignment="Center"/>
+        <Button Name="Add" Grid.Column="5" Margin="0" Background="Green" Click="AddRemove" FontSize="15" Foreground="White" Content="+"/>
+        <TextBlock Grid.Column="6" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

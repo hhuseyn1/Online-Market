@@ -7,6 +7,7 @@ public class Product
     public int Count { get; set; }
     public int BuyCount { get; set; } = 0;
     public string? ImageUrl { get; set; }
+    public bool? IsAdd { get; set; } = false;
     public double Price { get; set; }
 
     public override string ToString() =>

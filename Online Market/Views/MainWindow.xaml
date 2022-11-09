@@ -23,16 +23,15 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="/Images/MarketLogo.jpg" Margin="5"/>
-                <TextBox Grid.Column="2" Margin="5 20 5 20"  ></TextBox>
+                <TextBox Name="SearchBox" Grid.Column="2" Margin="5 20 5 20"  ></TextBox>
             <Image Name="SearchBtn" Source="/Images/Search.png" Grid.Column="3" MouseLeftButtonDown="SearchClick" Width="25"/>
-                <Image Name="ShoppingCar" Source="/Images/ShoppingCar.png" Grid.Column="5" MouseLeftButtonDown="SearchClick"/>
+                <Image Name="ShoppingCar" Source="/Images/ShoppingCar.png" Grid.Column="5" MouseLeftButtonDown="ShowList"/>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <WrapPanel Name="PrPanel"/>
-
             </ScrollViewer>
         </Grid>
     </Grid>
