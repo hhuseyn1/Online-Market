@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="300" Margin="5">
     <Grid Background="LightGray">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
             <RowDefinition/>
@@ -23,8 +24,19 @@
                 <ColumnDefinition Width="0.3*"/>
                 <ColumnDefinition Width="0.4*"/>
             </Grid.ColumnDefinitions>
-        <TextBlock Text="Count:" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0"/>
+            
+            <TextBlock Text="Count:" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0"/>
             <TextBlock Text="{Binding CurrentProduct.Count}" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Grid Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="PRCount" Grid.Column="1" HorizontalAlignment="Center" Background="White" Text="{Binding CurrentProduct.BuyCount}" VerticalAlignment="Center" Width="14" Height="13" TextAlignment="Center" Foreground="Black"/>
+                <Button Name="Add" Grid.Column="2" Background="Green"  Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Content="+" BorderThickness="0" FontSize="5" Height="13" Margin="0" Width="13"  Click="AddRemove"/>
+                <Button Name="Remove" Grid.Column="0" Background="Red" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" Content="-" FontSize="5" BorderThickness="0" Height="13" Margin="0" Width="13" Click="AddRemove" />
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>
